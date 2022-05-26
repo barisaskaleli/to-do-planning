@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Interfaces\TaskRepositoryInterface;
 use App\Services\Task;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class FetchTasks extends Command
 {

@@ -16,6 +16,4 @@ class Task extends Model
         'level',
         'estimated_duration',
     ];
-
-    protected $connection = 'mysql2';
 }

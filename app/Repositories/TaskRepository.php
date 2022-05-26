@@ -13,7 +13,9 @@ class TaskRepository implements TaskRepositoryInterface
      */
     public function addTasks($data)
     {
-        Task::insert($data);
+        $task = new Task();
+        $task->setConnection('mysql2');
+        $task->insert($data);
     }
 
     /**
@@ -22,6 +24,6 @@ class TaskRepository implements TaskRepositoryInterface
      */
     public function getTasks()
     {
-        Task::get();
+        return Task::get();
     }
 }
